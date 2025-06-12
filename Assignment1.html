@@ -2,59 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>First HTML Assignment</title>
-  <base href="https://www.example.com/">
-</head>
+  <title>Forms Learning</title>
+ </head>
+ <!--form action="form-get.html" method="get"-->
+<form action="form-post.html" method="post">
+    
+    <h2>Sample Form</h2>
+    <label>Full Name:</label><br>
+    <input type="text" id="name" name="name" placeholder="Enter your full name" required maxlength="50"><br><br>
+    <label for="age">Age:</label><br>
+    <input type="number" id="age" name="age" min="0" max="120" step="1" required><br><br>
+    <label>Gender:</label><br>
+    <input type="radio" id="male" name="gender" value="Male" required>
+    <label for="male">Male</label>
+    <input type="radio" id="Female" name="gender" value="Male" required>
+    <label for="female">Female</label><br><br>
 
-<body>
+    <label>Hobbies:</label><br>
+ <input type="checkbox" id="reading" name="hobbies" value="walking">
+  <label for="walking">Walking</label>
+    <input type="checkbox" id="swimming" name="hobbies" value="swimming">
+    <label for="swimming">Swimming</label>
+    <input type="checkbox" id="sports" name="hobbies" value="Sports">
+    <label for="sports">Sports</label><br><br>
 
-   <img src="C:\Users\Admin\Downloads\Microsoft_Logo_64px.png" alt="Company Logo" width="100">
-  
-  <h1>What is Microsoft Dynamics CRM?</h1>
+    <label for="country">Country:</label><br>
+    <select id="country" name="country" required>
+      <option value="" disabled selected>Select your country</option>
+      <option value="usa">United States</option>
+      <option value="canada">Canada</option>
+      <option value="india">India</option>
+    </select><br><br>
 
-  <h2>Overview</h2>
-  <p>
-    Microsoft Dynamics CRM is a customer relationship management software developed by Microsoft, designed to help businesses manage and analyze customer interactions and data throughout the customer lifecycle.
-    It enables organizations to:
-    <ol>
-  <li>Generate and track leads</li>
-  <li>Streamline sales, marketing, and customer service processes</li>
-  <li>Maintain a centralized database of customer information</li>
-  <li>Automate workflows and track communication history</li>
-</ol>
-     Personalize customer engagement by building a 360-degree view of each client. At its core, <i>Dynamics CRM is a powerful tool</i> that helps businesses enhance customer satisfaction, boost productivity, and drive revenue growth through better relationship management.
-  </p>
-    <p>
-    <h2>Glossary</h2>
-    <d1>
-      <dt>Account & Contact Management</dt>
-      <dd>Sales organizations can create a central hub for customer engagements. Data is collected from various sources to provide a comprehensive understanding of customer interactions.</dd>
-    </d1>
-  <p>
-    For more information, click the link below:
-    <a href="https://cargas.com/blog/what-is-microsoft-dynamics-365-crm-software/" target="_blank">Go to Microsoft</a>.
-  </p>
-  <p>
-    Below line will show the abbreviation of HTML:<br>
-    <abbr title="HyperText Markup Language">HTML</abbr>
-  </p>
+    <label for="bio">Short Bio:</label><br>
+    <textarea id="bio" name="bio" rows="4" cols="50" maxlength="300" placeholder="Tell us something about yourself..."></textarea><br><br>
 
-   <video width="640" height="360" controls>
-    <source src="videos/sample-video.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-  </video>
+    <label for="email">Email Address:</label><br>
+    <input type="email" id="email" name="email" placeholder="example@example.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br><br>
 
-     <section>
-    <h2>Contact Us</h2>
-    <address>
-      Microsoft Corporation<br>
-      One Microsoft Way<br>
-      Redmond, WA 98052-6399<br>
-      United States<br>
-      Phone: (425) 882-8080<br>
-      Email: <a href="mailto:contact@microsoft.com">contact@microsoft.com</a>
-    </address>
-  </section>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" required minlength="6" maxlength="20"><br><br>
 
-</body>
-</html>
+    <label for="dob">Date of Birth:</label><br>
+    <input type="date" id="dob" name="dob" max="2025-06-09" required><br><br>
+
+     <input type="submit" value="Submit">
+     <input type="submit" value="Submit">
+
+ </form>
