@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Drag and Drop Task</title>
+  <style>
+    #dragTarget {
+      width: 100px;
+      padding: 10px;
+      background-color: lightcoral;
+      cursor: grab;
+      margin-bottom: 20px;
+    }
+
+    #dropArea {
+      width: 200px;
+      height: 100px;
+      border: 2px dashed #aaa;
+      text-align: center;
+      line-height: 100px;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="dragTarget" draggable="true">Drag me</div>
+  <div id="dropArea">Drop here</div>
+
+  <script>
+    const dragTarget = document.getElementById('dragTarget');
+    const dropArea = document.getElementById('dropArea');
+
+    // Triggered when the drag starts
+    dragTarget.ondragstart = function (event) {
+      // Optionally set data to be transferred
+      event.dataTransfer.setData("text/plain", "dragTarget");
+    };
+
+    // Needed to allow dropping
+    dropArea.ondragover = function (event) {
+      event.preventDefault(); // Prevent default to allow drop
+    };
+
+    // Handle the drop
+    dropArea.ondrop = function (event) {
+      event.preventDefault(); // Prevent default behavior (e.g., open as link)
+      dropArea.innerText = "Dropped!";
+    };
+  </script>
+
+</body>
+</html>

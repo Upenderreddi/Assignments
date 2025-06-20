@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Manipulation Task</title>
+</head>
+<body>
+  <h1 id="main-title">Welcome!</h1>
+  <p class="desc">This is a description.</p>
+  <input type="text" id="nameInput" value="Student">
+  <button id="changeBtn">Change Text</button>
+
+  <script>
+    // Wait for the DOM to load
+    document.getElementById('changeBtn').addEventListener('click', function () {
+      // Change the <h1> text
+      document.getElementById('main-title').innerText = "Hello DOM!";
+      
+      // Update the <p> text
+      document.querySelector('.desc').innerText = "You've updated the description.";
+      
+      // Change the value inside the input box
+      document.getElementById('nameInput').value = "Your Name"; // Replace with your actual name
+    });
+  </script>
+</body>
+</html>
