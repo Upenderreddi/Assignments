@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Collections Task</title>
+  <style>
+    .colorBox {
+      padding: 10px;
+      margin: 5px;
+      width: 100px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="colorBox">Red</div>
+  <div class="colorBox">Green</div>
+  <div class="colorBox">Blue</div>
+
+  <script>
+    
+    const colorBoxes = document.getElementsByClassName('colorBox');
+    for (let i = 0; i < colorBoxes.length; i++) {
+      colorBoxes[i].style.backgroundColor = colorBoxes[i].innerText.toLowerCase();
+    }
+
+        document.querySelectorAll('.colorBox').forEach(function(box) {
+      box.style.border = '2px solid black';
+    });
+  </script>
+
+</body>
+</html>
+
