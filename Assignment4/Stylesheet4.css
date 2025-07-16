@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 16px;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: #f0f0f0;
+    font-family: Arial, sans-serif;
+  }
+
+  .dashboard {
+    font-size: 1rem;
+    margin: 2%;
+    padding: 1em;
+    border: 2px solid #ccc;
+    background-color: #fff;
+    max-width: 1200px;
+    min-height: 90vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sidebar {
+    display: inline-block;
+    vertical-align: top;
+    width: 15rem;
+    padding: 1.5em;
+    margin-right: 2%;
+    border: 3px solid #999;
+    background-color: #f4f4f4;
+    font-size: 0.95rem;
+    position: sticky;
+    top: 1em;
+  }
+
+  .sidebar h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1em;
+  }
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .sidebar li {
+    margin-bottom: 1%;
+  }
+
+  .sidebar a {
+    font-size: 1em;
+    text-decoration: none;
+    color: #333;
+  }
+
+  .sidebar a:focus {
+    outline: 2px solid #007BFF;
+    outline-offset: 2px;
+  }
+
+  .main-content {
+    display: inline-block;
+    width: calc(100% - 17rem - 2%);
+    padding: 2em;
+    border: 2px solid #ddd;
+    background-color: #fff;
+    font-size: 1rem;
+    vertical-align: top;
+    overflow: auto;
+  }
+
+  .header {
+    display: block;
+    margin-bottom: 2%;
+    padding: 1em;
+    border-bottom: 2px solid #ccc;
+    position: relative;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+    margin: 0 0 0.5em 0;
+  }
+
+  .notification-badge {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    border: 1px solid white;
+  }
+
+  .profile-card {
+    display: block;
+    border: 2px solid #eee;
+    padding: 1.5em;
+    margin-bottom: 2%;
+    background-color: #fafafa;
+    font-size: 1rem;
+    overflow: hidden;
+  }
+
+  .profile-pic {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 2%;
+    border: 3px solid #ccc;
+    vertical-align: top;
+  }
+
+  .profile-details {
+    display: inline-block;
+    vertical-align: top;
+    max-width: calc(100% - 90px);
+  }
+
+  .profile-details h2 {
+    margin: 0 0 1% 0;
+    font-size: 1.5em;
+  }
+
+  .profile-details p {
+    margin: 1% 0 0 0;
+    font-size: 1em;
+  }
+
+  .info-cards {
+    display: block;
+    padding: 2em;
+    border: 2px dashed #bbb;
+    font-size: 1rem;
+  }
+
+  .card {
+    display: inline-block;
+    width: 30%;
+    max-width: 100%;
+    background-color: #f0f0f0;
+    padding: 1em;
+    margin: 1%;
+    border: 2px solid #aaa;
+    text-align: center;
+    font-size: 0.95em;
+    vertical-align: top;
+    min-height: 100px;
+  }
+
+  @media (max-width: 768px) {
+    .sidebar,
+    .main-content,
+    .card {
+      display: block;
+      width: 100%;
+      margin-right: 0;
+    }
+
+    .dashboard {
+      padding: 1em 0.5em;
+    }
+
+    .profile-details {
+      display: block;
+      max-width: 100%;
+    }
+  }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Focus and Style Change</title>
+  <style>
+    #focusInput {
+      padding: 8px;
+      border: 2px solid gray;
+      outline: none;
+    }
+
+        #focusInput:focus {
+      border-color: dodgerblue;
+    }
+  </style>
+</head>
+<body>
+
+  <input type="text" id="focusInput">
+  <button id="focusBtn">Focus Input</button>
+
+  <script>
+        document.getElementById('focusBtn').addEventListener('click', function () {
+      document.getElementById('focusInput').focus();
+    });
+
+    const input = document.getElementById('focusInput');
+
+    input.addEventListener('focus', function () {
+      input.style.borderColor = 'dodgerblue';
+    });
+
+    input.addEventListener('blur', function () {
+      input.style.borderColor = 'gray'; 
+    });
+  </script>
+
+</body>
+</html>
