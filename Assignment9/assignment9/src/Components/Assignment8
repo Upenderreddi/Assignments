@@ -1,0 +1,167 @@
+// Part 1a: Arithmetic Operations
+let a = 10;
+let b = 3;
+
+console.log("Addition:", a + b);         // 10 + 3 = 13
+console.log("Subtraction:", a - b);      // 10 - 3 = 7
+console.log("Multiplication:", a * b);   // 10 * 3 = 30
+console.log("Division:", a / b);         // 10 / 3 ≈ 3.333...
+console.log("Modulus:", a % b);          // 10 % 3 = 1
+
+// Comparision 
+
+console.log(10 == "10");     // true (loose equality)
+console.log(10 === "10");    // false (strict equality)
+console.log(5 < 10);         // true
+console.log(15 > 20);        // false
+
+// Logical
+
+const isStudent = true;
+const hasID = false;
+
+console.log(isStudent && hasID); // false
+console.log(isStudent || hasID); // true
+console.log(!hasID);             // true
+
+// Implicit coercion
+console.log("5" + 1);         // "51"
+console.log("5" - 1);         // 4
+console.log(true + "yes");    // "trueyes"
+console.log(false + 5);       // 5
+
+//Explicit conversion
+console.log(Number("42"));    // 42
+console.log(String(123));     // "123"
+console.log(Boolean(0));      // false
+
+//a.Create and Access an Array
+let fruits = ["apple", "banana", "cherry"];
+console.log(fruits[1]);  // Output: "banana"
+
+//b. Change and Add Items
+fruits[1] = "mango";       // Change "banana" to "mango"
+fruits.push("orange");     // Add "orange" at the end
+fruits.pop();              // Remove the last item
+console.log(fruits);       // Output: ["apple", "mango", "cherry"]
+
+//c.Check Array Length for ["apple", "banana", "cherry"]
+fruits[0] = "apple"; 
+fruits[1] = "banana";
+fruits[2] = "cherry";
+
+//d.More Array Methods (try all and log results)
+//const numbers = [1, 2, 3, 4, 5];
+
+let numbers = [1, 2, 3, 4, 5];
+console.log("Original array:", numbers);
+
+// 1. Add .unshift
+numbers.unshift(0);
+console.log("After unshift(0):", numbers); 
+
+//2.  Add .shift
+numbers.shift();
+console.log("After shift():", numbers); 
+
+//3. .includes()
+console.log("Includes 3:", numbers.includes(3)); // true
+console.log("Includes 9:", numbers.includes(9)); // false
+
+//.indexof()
+console.log("Index of 4:", numbers.indexOf(4)); // 3
+console.log("Index of 9:", numbers.indexOf(9)); // -1 (not found)
+// .slice()
+let sliced = numbers.slice(1, 4);  // from index 1 to 3
+console.log("Sliced (1, 4):", sliced); // [2, 3, 4]
+console.log("Original after slice:", numbers); // unchanged
+
+//.splice()
+let spliced = numbers.splice(2, 2);  
+console.log("Spliced (2, 2):", spliced); // [3, 4]
+console.log("After splice:", numbers);  // [1, 2, 5]
+
+// .reverse
+numbers.reverse();
+console.log("After reverse():", numbers); // [5, 2, 1]
+
+// Final output
+// Original array: [1, 2, 3, 4, 5]
+// After unshift(0): [0, 1, 2, 3, 4, 5]
+// After shift(): [1, 2, 3, 4, 5]
+// Includes 3: true
+// Includes 9: false
+// Index of 4: 3
+// Index of 9: -1
+// Sliced (1, 4): [2, 3, 4]
+// Original after slice: [1, 2, 3, 4, 5]
+// Spliced (2, 2): [3, 4]
+// After splice: [1, 2, 5]
+// After reverse(): [5, 2, 1]
+
+//a. Evaluate Expressions
+
+console.log(5 + 3);             // 8
+console.log("Hello" + "!");     // "Hello!"
+console.log(7 > 2);             // true
+
+//b.Ternary Operator
+let marks = 65; // You can change this value to test
+let result = marks > 50 ? "Pass" : "Fail";
+console.log(result);  // Output: "Pass"
+
+// Basic function
+function greet() {
+    console.log("Welcome to the site!");
+}
+
+greet(); // Output: Welcome to the site!
+
+// Function with one parameter
+
+function greetUser(name) {
+    console.log("Hello, " + name);
+}
+
+greetUser("Alice"); // Output: Hello, Alice
+
+//Function with two parameter
+function addNumbers(a, b) {
+    console.log("Sum:", a + b);
+}
+
+addNumbers(5, 7); // Output: Sum: 12
+
+//4. Function that Returns a Value
+function subtractNumbers(x, y) {
+    return x - y;
+}
+
+let difference = subtractNumbers(10, 4);
+console.log("Difference:", difference); // Output: Difference: 6
+
+// 5. Function Using a Comparison Operator
+function isGreaterThan100(num) {
+    return num > 100;
+}
+
+console.log(isGreaterThan100(150)); // Output: true
+console.log(isGreaterThan100(80));  // Output: false
+
+//6.Function Using a Logical Operator
+function bothTrue(a, b) {
+    return a && b;
+}
+
+console.log(bothTrue(true, true));   // Output: true
+console.log(bothTrue(true, false));  // Output: false
+
+//7.Function that Accepts an Array
+function logFirstItem(arr) {
+    console.log("First item:", arr[0]);
+}
+
+logFirstItem(["apple", "banana", "cherry"]); // Output: First item: apple
+
+
+
